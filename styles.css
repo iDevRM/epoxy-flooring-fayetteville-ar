@@ -92,6 +92,12 @@ p { margin-bottom: 18px; }
 .section-img { width: 100%; border-radius: 10px; box-shadow: var(--shadow); margin: 28px 0; object-fit: cover; height: 380px; }
 .img-caption { font-size: .82rem; color: var(--muted); text-align: center; margin-top: -20px; margin-bottom: 24px; }
 
+/* ── PROJECT GALLERY ─────────────────────────────────────── */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 28px; }
+.gallery-item img { width: 100%; height: 260px; object-fit: cover; border-radius: 10px; box-shadow: var(--shadow); display: block; transition: transform .2s; }
+.gallery-item img:hover { transform: translateY(-3px); }
+.gallery-caption { font-size: .85rem; color: var(--muted); text-align: center; margin-top: 10px; margin-bottom: 0; }
+
 /* ── 2-COL GRID ──────────────────────────────────────────── */
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
 @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } }
