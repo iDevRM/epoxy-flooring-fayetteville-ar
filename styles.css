@@ -204,3 +204,52 @@ a.inline { color: #2563eb; text-decoration: underline; }
   .hero-btns { flex-direction: column; align-items: center; }
   .cost-table { font-size: .85rem; }
 }
+
+/* ---------- SERVICES NAV DROPDOWN ---------- */
+.nav-links li.has-dropdown { position: relative; }
+.has-dropdown > a { display: inline-flex; align-items: center; gap: 6px; }
+.has-dropdown > a::after {
+  content: "";
+  width: 0; height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+}
+/* padding-top (not margin) so the gap stays inside the hoverable box */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -18px;
+  padding-top: 16px;
+  min-width: 260px;
+  z-index: 300;
+}
+.has-dropdown:hover .dropdown-menu,
+.has-dropdown:focus-within .dropdown-menu { display: block; }
+.dropdown-menu-list {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  background: var(--navy);
+  border: 1px solid rgba(255,255,255,.12);
+  border-top: 3px solid var(--orange);
+  box-shadow: 0 8px 24px rgba(0,0,0,.30);
+}
+.dropdown-menu-list li { display: block; }
+.dropdown-menu-list li + li { border-top: 1px solid rgba(255,255,255,.08); }
+.dropdown-menu-list a {
+  display: block;
+  padding: 11px 18px;
+  color: var(--mid);
+  font-size: .9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.dropdown-menu-list a:hover { background: var(--navy2); color: var(--white); }
+@media (max-width: 860px) {
+  .dropdown-menu { display: none !important; }
+  .has-dropdown > a::after { display: none; }
+}
