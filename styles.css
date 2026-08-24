@@ -63,6 +63,26 @@ nav {
 }
 .home-hero::after { background: rgba(255, 255, 255, 0.35); }
 .home-hero .hero-inner p { color: #111; }
+
+/* Front-page hero: two-column layout with lead form */
+.hero-grid {
+  max-width: 1080px; display: grid;
+  grid-template-columns: 1.05fr 0.95fr; gap: 48px;
+  align-items: center; text-align: left;
+}
+.home-hero .hero-copy h1 { color: var(--navy); }
+.home-hero .hero-copy p { max-width: 540px; margin-left: 0; margin-right: 0; margin-bottom: 28px; }
+.hero-grid .hero-btns { justify-content: flex-start; }
+.home-hero .hero-copy .btn-secondary { border-color: var(--navy); color: var(--navy); }
+.home-hero .hero-copy .btn-secondary:hover { background: rgba(30,58,95,.08); }
+.hero-form { width: 100%; max-width: 440px; margin-left: auto; padding: 30px; text-align: left; }
+.hero-form h2 { font-size: 1.35rem; color: var(--navy); margin-bottom: 6px; }
+.home-hero .hero-form p { color: var(--muted); font-size: .92rem; margin-bottom: 20px; max-width: none; }
+.hero-form input, .hero-form select { margin-bottom: 14px; }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero-form { margin-left: 0; max-width: 520px; }
+}
 .hero-inner { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; }
 .hero h1 { font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
 .hero h1 span { color: var(--orange); }
